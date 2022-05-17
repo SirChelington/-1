@@ -5,7 +5,7 @@ If there is no middle letter, your function should return the empty string.
 
 For example, mid("abc") should return "b" and mid("aaaa") should return ""."""
 
-
+### my solution
 def mid(string):
     if len(string) % 2 == 0:
         return ""
@@ -15,3 +15,14 @@ def mid(string):
 
 
 print(mid("abcaaaaaaagggggPuuuuuoooooaaaaa"))
+
+
+### example solution
+"""
+# this approach uses // which is integer division in Python 3
+# alternatively, use / and int() in combination.
+def mid(string):
+    if len(string) % 2 == 0:
+        return ""
+    return string[len(string)//2]
+"""

@@ -5,7 +5,7 @@ For example, the string "hello" has l twice in a row, while the string "nono" do
 Define a function named double_letters that takes a single parameter. The parameter is a string.
 Your function must return True if there are two identical letters in a row in the string, and False otherwise."""
 
-
+### my solution
 def double_letters(word):
     check = ""
     for char in word:
@@ -15,4 +15,23 @@ def double_letters(word):
             return True
     return False
 
-print(double_letters("helo"))
+
+print(double_letters("hello"))
+
+
+### example solution
+"""
+# naive solution
+def double_letters(string):
+    for i in range(len(string) - 1):
+        letter1 = string[i]
+        letter2 = string[i+1]
+        if letter1 == letter2:
+            return True
+    return False
+
+# shorter solution
+# using a list comprehension, zip, and any
+def double_letters(string):
+    return any([a == b for a, b in zip(string, string[1:])])
+"""

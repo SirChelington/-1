@@ -4,7 +4,7 @@ Your function should return True if both parameters are integers, and False othe
 
 For example, calling only_ints(1, 2) should return True, while calling only_ints("a", 1) should return False.
 """
-
+### my solution
 from xmlrpc.client import boolean
 
 
@@ -22,7 +22,9 @@ def only_ints(one, two):
 
 print(only_ints(9, True))
 
-def only_ints2(a, b):
-    return type(a) == int and type(b) == int
 
-print(only_ints2(9, True))
+### example solution
+"""
+def only_ints(a, b):
+    return type(a) == int and type(b) == int
+"""

@@ -6,6 +6,7 @@ Calling the function multiple times should (usually) return different numbers.
 
 For example, calling random_number() some times might first return 42, then 63, then 1."""
 
+### my solution
 import random
 
 
@@ -15,3 +16,11 @@ def random_number():
 
 
 print(random_number())
+
+
+### example solution
+"""
+import random
+def random_number():
+    return random.randint(1, 100)
+"""
