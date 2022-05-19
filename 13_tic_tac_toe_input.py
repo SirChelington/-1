@@ -27,3 +27,36 @@ which is a string of length 2 consisting of an uppercase letter and a digit.
 For example, calling get_row_col("A3") should return the tuple (2, 0) because A3 corresponds to the row at index 2
 and column at index 0in the board.
 """
+
+### my solution
+
+
+def get_row_col(string_of_two):
+    dictionary = {
+        "A1": (0, 0),
+        "A2": (1, 0),
+        "A3": (2, 0),
+        "B1": (0, 1),
+        "B2": (1, 1),
+        "B3": (2, 1),
+        "C1": (0, 2),
+        "C2": (1, 2),
+        "C3": (2, 2),
+    }
+    return dictionary[string_of_two]
+
+
+print(get_row_col("A3"))
+
+
+### example solution
+
+"""
+def get_row_col(choice):
+    translate = {"A": 0, "B": 1, "C": 2}
+    letter = choice[0]
+    number = choice[1]
+    row = int(number) - 1
+    column = translate[letter]
+    return (row, column)
+"""
